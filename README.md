@@ -33,6 +33,10 @@ Este proyecto se desarrolla como parte de la asignatura **Desarrollo Web en Ento
 - El Administrador gestiona la tienda
 
 - El Cliente compra videojuegos y gestiona su cuenta
+  
+---
+
+## 📁 Estructura del proyecto (boceto)
 
 ```
 /gamely
