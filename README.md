@@ -69,4 +69,4 @@ Este proyecto se desarrolla como parte de la asignatura **Desarrollo Web en Ento
 │       ├── index.php
 │       └── registro.php
 │
-├── README.md  
+├── README.md   
