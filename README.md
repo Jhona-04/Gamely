@@ -41,27 +41,32 @@ Este proyecto se desarrolla como parte de la asignatura **Desarrollo Web en Ento
 ```
 /gamely
 │
-├── /database                    # Carpeta SOLO para SQL
-│   ├── schema.sql              # Estructura tablas
-│   └── datos_prueba.sql        # pruebas
+├── /database
+│   ├── /config
+│   │   └── database.php          # Configuración de la base de datos
+│   └── /schemas
+│       └── schema.php            # Estructura de tablas
 │
 ├── /src
-│   │
 │   ├── /assets
-│   │   ├── /css                # Estilos CSS
-│   │   └── /images             # Imágenes del sitio
+│   │   ├── /css
+│   │   │   ├── carrito
+│   │   │   │   └── carrito.css   # Estilos del carrito
+│   │   │   ├── catalogo
+│   │   │   │   └── catalogo.css  # Estilos del catálogo
+│   │   │   ├── footer.css
+│   │   │   ├── header.css
+│   │   │   ├── menu.css
+│   │   │   └── style.css
+│   │   └── /images                 # Imágenes del sitio
 │   │
-│   ├── /config
-│   │   └── database.php        # Conexión bdd
-│   │
-│   ├── /functions             
-│   │   └── funciones.php       # Funciones
+│   ├── /functions
+│   │   └── funciones.php           # Funciones reutilizables
 │   │
 │   └── /public
-│       ├── carrito.php         # Carrito de compra
-│       ├── catalogo.php        # Lista de videojuegos  
-│       ├── index.php           # Página principal
-│       ├── login.php           # Login de usuarios
-│       └── registro.php        # Registro de usuarios
+│       ├── carrito.php
+│       ├── catalogo.php
+│       ├── index.php
+│       └── registro.php
 │
-└── README.md
+├── README.md  
