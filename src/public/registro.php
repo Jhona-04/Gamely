@@ -69,12 +69,13 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/login/login.css">
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 <body>
-    <main class="main__log"><!-- Añadir color de fondo -->
-        <section class= "log__container"> <!-- Dar formato -->
+    <main class="main__log">
+        <section class= "log__container">
             <h1 class="log__title">&#127918; Gamely</h1>
             <h2 class="log__subtitle">Crear cuenta</h2>
             
@@ -88,30 +89,30 @@
                 <form method="POST">
                     <!-- Nombre -->
                     <div class="form-group">
-                        <label>Nombre completo:</label>
-                        <input type="text" name="nombre" value="<?php echo isset($_POST['nombre']) ? $_POST['nombre'] : ''; ?>" required>
+                        <label class="form-group__label">Nombre completo:</label>
+                        <input class="form-group__input" type="text" name="nombre" value="<?php echo isset($_POST['nombre']) ? $_POST['nombre'] : ''; ?>" required>
                     </div>
                     <!-- Usuario -->
                     <div class="form-group">
-                        <label>Usuario:</label>
-                        <input type="text" name="usuario" value="<?php echo isset($_POST['usuario']) ? $_POST['usuario'] : ''; ?>" required>
+                        <label class="form-group__label">Usuario:</label>
+                        <input class="form-group__input" type="text" name="usuario" value="<?php echo isset($_POST['usuario']) ? $_POST['usuario'] : ''; ?>" required>
                     </div>
                     <!-- Contraseña -->
                     <div class="form-group">
-                        <label>Contraseña</label>
-                        <input type="password" name="password" required>
+                        <label class="form-group__label">Contraseña</label>
+                        <input class="form-group__input" type="password" name="password" required>
                     </div>
                     <!-- Rol -->
                     <div class="form-group">
-                        <label>Tipo de cuenta:</label>
-                        <select name="rol" required>
-                            <option value="">-- Selecciona --</option>
-                            <option value="cliente" <?php echo (isset($_POST['rol']) && $_POST['rol'] == 'cliente') ? 'selected' : ''; ?>>Cliente</option>
-                            <option value="admin" <?php echo (isset($_POST['rol']) && $_POST['rol'] == 'admin') ? 'selected' : ''; ?>>Administrador</option>
+                        <label class="form-group__label">Tipo de cuenta:</label>
+                        <select class="form-group__select" name="rol" required>
+                            <option class="form-group__option" value="" hidden></option>
+                            <option class="form-group__option" value="cliente" <?php echo (isset($_POST['rol']) && $_POST['rol'] == 'cliente') ? 'selected' : ''; ?>>Cliente</option>
+                            <option class="form-group__option" value="admin" <?php echo (isset($_POST['rol']) && $_POST['rol'] == 'admin') ? 'selected' : ''; ?>>Administrador</option>
                         </select>
                     </div>
                     <!-- Botón de registro -->
-                    <button type="submit">Registrarse</button>
+                    <button class="login__in" type="submit">Registrarse</button>
 
                 </form>
             </article>
@@ -125,16 +126,14 @@
 
             <!-- Autenticación social -->
             <article class="login__social">
-                <p>O registrarte con</p>
+                <p class="login__text">O registrarte con</p>
                 <div class="login__icons">
                     <i class="login__icon fa-brands fa-google"></i>
                     <i class="login__icon fa-brands fa-facebook-f"></i>
                     <i class="login__icon fa-brands fa-twitter"></i>
                 </div>
             </article>
-        </section>
-
-       
+        </section>      
     </main>
 </body>
 </html>

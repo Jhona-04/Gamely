@@ -1,17 +1,91 @@
-*{
+* {
     box-sizing: border-box;
 }
-body{
-    margin: 0;
-    padding: 0;
+/* ============================================
+   BARRA CUSTOM
+   ============================================ */
+
+::-webkit-scrollbar {
+    background: var(--bg-dark);   
 }
 
-/**** CONTENEDOR LOG ****/
-.log__container {
-    height: 100vh;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--primary-color), var(--secondary-color));
+    border-radius: 10px;
+    border: 3px solid rgba(26, 26, 46, 0.8);
 }
+/* ============================================
+   VARIABLES DE COLORES Y ESTILOS
+   ========================================== */
+
+:root {
+    /* Colores principales*/
+    --primary-color: #6c5ce7;       /* Púrpura principal */
+    --primary-dark: #5b4fcf;        /* Púrpura más oscuro para hover */
+    --secondary-color: #00cec9;     /* Turquesa de acento */
+    --accent-color: #fd79a8;        /* Rosado para elementos destacados */
+    
+    /* Colores de fondo */
+    --bg-dark: #1a1a2e;             /* Fondo oscuro principal */
+    --bg-card: #2d2d44;             /* Fondo de tarjetas */
+    --bg-light: #f8f9fa;            /* Fondo claro para textos */
+    
+    /* Colores de texto */
+    --text-primary: #ffffff;        /* Texto principal blanco */
+    --text-secondary: #b8b8d1;      /* Texto secundario gris claro */
+    --text-muted: #8a8aa3;          /* Texto apagado */
+    
+    --success-color: #00b894;       /* Verde para éxito */
+    --error-color: #ff7675;         /* Rojo para errores */
+    --warning-color: #fdcb6e;       /* Amarillo para advertencias */
+    
+    /* Sombras y bordes */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.2);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.3);
+    --border-radius: 12px;          /* Bordes redondeados */
+    --border-radius-lg: 20px;
+    
+    /* Espaciados */
+    --space-xs: 8px;
+    --space-sm: 16px;
+    --space-md: 24px;
+    --space-lg: 32px;
+    --space-xl: 48px;
+    
+    /* Transiciones */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+/* ============================================
+   ESTILOS GENERALES DEL BODY
+   ============================================ */
+
+body {
+    font-family: 'Poppins', sans-serif;  
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);  
+    padding: var(--space-md);
+    position: relative;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: 50px 50px;
+    opacity: 0.3;
+    z-index: -1;
+}
+

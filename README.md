@@ -50,18 +50,20 @@ Este proyecto se desarrolla como parte de la asignatura **Desarrollo Web en Ento
 ├── /src
 │   ├── /assets
 │   │   ├── /css
-│   │   │   ├── carrito
+│   │   │   ├── /carrito
 │   │   │   │   └── carrito.css   # Estilos del carrito
-│   │   │   ├── catalogo
+│   │   │   ├── /catalogo
 │   │   │   │   └── catalogo.css  # Estilos del catálogo
+│   │   │   ├── /login
+│   │   │   │   └── login.css     # Estilos del login/registro
 │   │   │   ├── footer.css
 │   │   │   ├── header.css
 │   │   │   ├── menu.css
 │   │   │   └── style.css
-│   │   └── /images                 # Imágenes del sitio
+│   │   └── /images               # Imágenes del sitio
 │   │
 │   ├── /functions
-│   │   └── funciones.php           # Funciones reutilizables
+│   │   └── funciones.php         # Funciones reutilizables
 │   │
 │   └── /public
 │       ├── carrito.php
@@ -69,4 +71,4 @@ Este proyecto se desarrolla como parte de la asignatura **Desarrollo Web en Ento
 │       ├── index.php
 │       └── registro.php
 │
-├── README.md   
+├── README.md  
