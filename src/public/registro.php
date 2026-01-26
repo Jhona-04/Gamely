@@ -1,25 +1,19 @@
-<?php 
-    require "./../../database/config/database.php"; 
-    require "./../functions/funciones.php"; 
+<?php
+    require "./../../database/config/database.php";
+    require "./../functions/funciones.php";
 
-    // Redirigir si ya está logueado
     if (estaLogueado()) {
-        header('Location: catalogo.php');
-        exit();
+        redirigirRol();
     }
 
     $error = '';
-    $exito = '';
 
-    // Procesar el registro
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $nombre = trim($_POST['nombre']);
         $usuario = trim($_POST['usuario']);
         $password = $_POST['password'];
-        $nombre = trim($_POST['nombre']);
-        $rol = $_POST['rol']; // solo se usa para sesión, no se guarda en BD
 
-        // Validaciones
-        if (empty($usuario) || empty($password) || empty($nombre) || empty($rol)) {
+        if (empty($nombre) || empty($usuario) || empty($password)) {
             $error = "Todos los campos son obligatorios";
         } elseif (strlen($password) < 6) {
             $error = "La contraseña debe tener al menos 6 caracteres";
@@ -31,16 +25,12 @@
             if ($stmt->fetch()) {
                 $error = "El usuario ya existe";
             } else {
-                // Crear nuevo usuario
+                // Crear nuevo usuario SIN rol (solo admin tiene rol)
                 $password_hash = password_hash($password, PASSWORD_DEFAULT);
                 $stmt = $pdo->prepare("INSERT INTO usuarios (usuario, password, nombre) VALUES (?, ?, ?)");
-
+                
                 if ($stmt->execute([$usuario, $password_hash, $nombre])) {
-                    // Guardar rol en sesión
-                    $_SESSION['rol'] = $rol;
-
-                    // Redirigir al catálogo
-                    header('Location: catalogo.php');
+                    header('Location: index.php');
                     exit();
                 } else {
                     $error = "Error al registrar usuario";
@@ -75,7 +65,7 @@
 </head>
 <body>
     <main class="main__log">
-        <section class= "log__container">
+        <section class="log__container">
             <h1 class="log__title">&#127918; Gamely</h1>
             <h2 class="log__subtitle">Crear cuenta</h2>
             
@@ -85,7 +75,7 @@
             <?php endif; ?>   
 
             <!-- Formulario de registro -->
-            <article class= "form">
+            <article class="form">
                 <form method="POST">
                     <!-- Nombre -->
                     <div class="form-group">
@@ -101,15 +91,6 @@
                     <div class="form-group">
                         <label class="form-group__label">Contraseña</label>
                         <input class="form-group__input" type="password" name="password" required>
-                    </div>
-                    <!-- Rol -->
-                    <div class="form-group">
-                        <label class="form-group__label">Tipo de cuenta:</label>
-                        <select class="form-group__select" name="rol" required>
-                            <option class="form-group__option" value="" hidden></option>
-                            <option class="form-group__option" value="cliente" <?php echo (isset($_POST['rol']) && $_POST['rol'] == 'cliente') ? 'selected' : ''; ?>>Cliente</option>
-                            <option class="form-group__option" value="admin" <?php echo (isset($_POST['rol']) && $_POST['rol'] == 'admin') ? 'selected' : ''; ?>>Administrador</option>
-                        </select>
                     </div>
                     <!-- Botón de registro -->
                     <button class="login__in" type="submit">Registrarse</button>

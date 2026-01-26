@@ -1,24 +1,23 @@
-<?php 
-    require "./../../database/config/database.php"; 
-    require "./../functions/funciones.php"; 
+<?php
+    require "./../../database/config/database.php";
+    require "./../functions/funciones.php";
 
-    // Redirigir si ya está logueado
+    // Verificar si el usuario ya está logueado
     if (estaLogueado()) {
-        header('Location: catalogo.php');
-        exit();
+        redirigirRol();
     }
+
     $error = '';
 
-    // Procesar el inicio de sesión
+    // Validaciones
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $usuario = $_POST['usuario'];
+        $usuario = trim($_POST['usuario']);
         $password = $_POST['password'];
 
-        // Validaciones
         if (empty($usuario) || empty($password)) {
             $error = "Completa todos los campos";
         } else {
-            $stmt = $pdo->prepare("SELECT id, usuario, password, nombre FROM usuarios WHERE usuario = ?");
+            $stmt = $pdo->prepare("SELECT id, usuario, password, nombre, rol FROM usuarios WHERE usuario = ?");
             $stmt->execute([$usuario]);
             $user = $stmt->fetch();
 
@@ -26,9 +25,9 @@
                 $_SESSION['user_id'] = $user['id'];
                 $_SESSION['usuario'] = $user['usuario'];
                 $_SESSION['nombre'] = $user['nombre'];
+                $_SESSION['rol'] = $user['rol'];
 
-                header('Location: catalogo.php');
-                exit();
+                redirigirRol();
             } else {
                 $error = "Usuario o contraseña incorrectos";
             }
@@ -59,13 +58,13 @@
 </head>
 <body>
     <main class="main__log">
-        <section class= "log__container"> 
+        <section class="log__container"> 
             <h1 class="log__title">&#127918; Gamely</h1>
             <h2 class="log__subtitle">Iniciar sesión</h2>
 
             <!-- Mensajes de error -->
-            <?php if (!empty($error)): ?>
-                <article class="error"><?php echo $error; ?></article>
+            <?php if ($error): ?>
+                <article class="error"><?php echo limpiar($error); ?></article>
             <?php endif; ?>
 
             <!-- Formulario de inicio de sesión -->
