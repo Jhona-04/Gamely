@@ -75,4 +75,4 @@ Este proyecto se desarrolla como parte de la asignatura **Desarrollo Web en Ento
 │       ├── logout.php
 │       └── registro.php
 │
-├── README.md  
+├── README.md 
