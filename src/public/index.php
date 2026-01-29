@@ -56,7 +56,7 @@
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
-<body>
+<body class="body">
     <main class="main__log">
         <section class="log__container"> 
             <h1 class="log__title">&#127918; Gamely</h1>
