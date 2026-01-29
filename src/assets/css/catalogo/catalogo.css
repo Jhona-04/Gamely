@@ -1,0 +1,57 @@
+/* ============================================
+    IMAGEN PRINCIPAL - ANIMACIÓN
+   ============================================ */
+
+.imagen-principal {
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+    position: relative;
+    box-shadow: var(--shadow-lg);
+}
+
+.imagen-principal__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: bounce 30s infinite linear;
+}
+
+/* Animación de movimiento panorámico */
+@keyframes bounce {
+    0% {
+        transform: scale(1.1) translateX(0) translateY(0);
+    }
+    25% {
+        transform: scale(1.1) translateX(-2%) translateY(-1%);
+    }
+    50% {
+        transform: scale(1.1) translateX(-4%) translateY(1%);
+    }
+    75% {
+        transform: scale(1.1) translateX(-2%) translateY(-1%);
+    }
+    100% {
+        transform: scale(1.1) translateX(0) translateY(0);
+    }
+}
+.imagen-principal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(26, 26, 46, 0.3) 70%,
+        var(--bg-dark) 100%
+    );
+    z-index: 1;
+}
+
+.imagen-principal__img {
+    position: relative;
+    z-index: 0;
+}

@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
 }
+
 /* ============================================
    BARRA CUSTOM
    ============================================ */
@@ -67,6 +68,7 @@ body {
     font-family: 'Poppins', sans-serif;  
     position: relative;
     overflow-x: hidden; 
+    background-color: var(--bg-dark);
 }
 
 body::before {

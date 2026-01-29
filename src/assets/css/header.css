@@ -2,10 +2,6 @@
     HEADER SUPERIOR
    ============================================ */
 
-html {
-    background-color: var(--bg-dark);
-}
-
 .header {
     display: flex;
     flex-direction: column;
@@ -13,14 +9,15 @@ html {
 
 .header-superior__size {
     width: 100%;
-    max-width: 1200px;
+    /* max-width: 1200px; */ /* ← Para que coga todo el ancho */
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
     align-items: center;
 }
 
 .header-superior {
+    padding: 0 var(--space-lg);
     width: 100%;
     background-color: var(--bg-dark);
     display: flex;
@@ -28,7 +25,6 @@ html {
     align-items: center;
     padding: var(--space-sm) 0;
 }
-
 /* ============================================
 LOGO HEADER
 ============================================ */
@@ -37,12 +33,13 @@ LOGO HEADER
     font-family: 'Roboto', sans-serif;
     font-size: 3rem;
     font-weight: 900;
-    text-align: center;
+    text-align: left; /* ← AÑADIDO: Alineado a izquierda */
     letter-spacing: -1px;
     position: relative;
     margin-top: 10px;
     width: 100%;
     color: var(--primary-color);
+    margin-left: 0; /* ← AÑADIDO: Sin margen */
 }
 
 /* Efecto de brillo */
@@ -58,8 +55,8 @@ LOGO HEADER
     content: '';
     position: absolute;
     bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0; /* ← AÑADIDO: Alineado a izquierda */
+    transform: translateX(0); /* ← AÑADIDO: Sin centrado */
     width: 150px;
     height: 4px;
     background: linear-gradient(
@@ -93,14 +90,31 @@ LOGO HEADER
     background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
     border-radius: 2px;
 }
-
 /* ============================================
-TEXT HEADER
+TEXT HEADER - USUARIO
 ============================================ */
+
+.header-superior__user { /* ← AÑADIDO: Contenedor usuario */
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
 
 .header-superior__welcome {
     color: var(--text-primary);
+    font-size: 1.2rem; /* ← AÑADIDO: Cambié el tamaño de fuente */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
 }
+.header-superior__welcome:hover {
+    color: var(--primary-color);
+    transition: color var(--transition-normal);
+    border-bottom: 1px solid var(--primary-color);
+    cursor: pointer;
+}
+
 
 .header-superior__nav {
     display: flex;
@@ -111,7 +125,6 @@ TEXT HEADER
     color: var(--text-primary);
     text-decoration: none;
 }
-
 /* ============================================
     HEADER INFERIOR
    ============================================ */
@@ -120,9 +133,26 @@ TEXT HEADER
     width: 100%;
     background-color: var(--bg-card);
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* ← AÑADIDO: Para separar centro y derecha */
     align-items: center;
-    padding: var(--space-sm) 0;
+    padding: var(--space-sm) var(--space-lg);
+    position: relative; /* ← AÑADIDO: Para posicionamiento absoluto del centro */
+}
+
+
+/* AÑADIDO: Menú centrado */
+.header-inferior__center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: var(--space-xl);
+}
+
+/* AÑADIDO: Acciones de usuario derecha */
+.header-inferior__nav-right {
+    display: flex;
+    gap: var(--space-lg);
 }
 
 .header-inferior__list {
@@ -141,19 +171,39 @@ TEXT HEADER
     font-size: 1.1rem;
     position: relative;
 }
-
-/* ============================================
-    IMAGEN PRINCIPAL
-   ============================================ */
-
-.imagen-principal {
-    width: 98vw;
-    height: 70vh;
-    display: flex;
-    justify-content: center;
+.header-inferior__link::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width var(--transition-normal);
 }
-
-.imagen-principal__img {
+.header-inferior__link:hover::after {
     width: 100%;
-    box-shadow: var(--shadow-lg);
 }
+
+/* AÑADIDO: Estilos para acciones de usuario */
+.header-inferior__action-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: var(--border-radius);
+    transition: all var(--transition-normal);
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-inferior__action-link:hover {
+    background-color: rgba(108, 92, 231, 0.2);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+

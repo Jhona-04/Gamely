@@ -11,7 +11,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Gamely</title>
+        <title>Catalogo - Gamely</title>
 
         <!-- Estilos CSS -->
         <link rel="stylesheet" href="../../assets/css/style.css">
@@ -38,35 +38,57 @@
     <body>
         <div class="container">
             <header class="header">
+                <!-- PARTE SUPERIOR -->
                 <section class="header-superior">
                     <section class="header-superior__size">
+                        <!-- Logo a la izquierda -->
                         <section class="header-superior__logo">
                             <h1 class="header-superior__logo-logo">&#127918; Gamely</h1>
                         </section>
-                        <section>
-                            <h2 class="header-superior__welcome"><i class="fa-solid fa-user"></i>Bienvenido/a, <?php echo htmlspecialchars($_SESSION['nombre']); ?>!</h2>
-                            <nav class="header-superior__nav">
-                                <a class="header-superior__link" href="../carrito.php"><i class="fa-solid fa-cart-shopping"></i>&nbsp;Lista Compra</a>
-                                <a class="header-superior__link" href="../logout.php"><i class="fa-solid fa-arrow-right-from-bracket"></i>&nbsp;</i>Cerrar sesión</a>
-                            </nav>
+                        
+                        <!-- Usuario a la derecha -->
+                        <section class="header-superior__user">
+                            <h2 class="header-superior__welcome">
+                                <i class="fa-solid fa-user"></i>
+                                Bienvenido/a, <?php echo htmlspecialchars($_SESSION['nombre']); ?>!
+                            </h2>
                         </section>
-
                     </section>
                 </section>
 
+                <!-- PARTE INFERIOR -->
                 <nav class="header-inferior">
-                    <ul class="header-inferior__list">
-                        <li class="header-inferior__item"><a href="#" class="header-inferior__link">Inicio</a></li>
-                        <li class="header-inferior__item"><a href="#" class="header-inferior__link">Recomendados</a></li>
-                        <li class="header-inferior__item"><a href="#" class="header-inferior__link">Mejores juegos</a></li>
-                        <li class="header-inferior__item"><a href="#" class="header-inferior__link">Tarjetas Regalo</a></li>
-                    </ul>
+                    <!-- Espacio vacío para balancear -->
+                    <div class="header-inferior__spacer"></div>
+                    
+                    <!-- Menú de navegación centrado -->
+                    <div class="header-inferior__center">
+                        <a href="#" class="header-inferior__link">Inicio</a>
+                        <a href="#" class="header-inferior__link">Recomendados</a>
+                        <a href="#" class="header-inferior__link">Mejores juegos</a>
+                        <a href="#" class="header-inferior__link">Tarjetas Regalo</a>
+                    </div>
+                    
+                    <!-- Acciones de usuario (derecha) -->
+                    <div class="header-inferior__nav-right">
+                        <a class="header-inferior__action-link" href="../carrito.php">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span>Lista Compra</span>
+                        </a>
+                        <a class="header-inferior__action-link" href="../logout.php">
+                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            <span>Cerrar sesión</span>
+                        </a>
+                    </div>
                 </nav>
             </header>
+
+            <!-- Imagen principal con animación -->
             <section class="imagen-principal">
                 <img class="imagen-principal__img" src="./../../assets/images/imagen_principal.png" alt="Imagen Principal">
             </section>
 
+            <!-- Contenido principal del catálogo -->
             <main class="main__catalogo">
                 <div>
                     <section>
@@ -77,7 +99,6 @@
                         </div>
                     </section>
                 </div>
-                
             </main>
         </div>
     </body>
