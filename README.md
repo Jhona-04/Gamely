@@ -66,13 +66,9 @@ Este proyecto se desarrolla como parte de la asignatura **Desarrollo Web en Ento
 │   │   └── funciones.php         # Funciones reutilizables
 │   │
 │   └── /public
-│       ├── /admin   
-│       │   └── admin_dashboard.php   
-│       ├── /client   
-│       │   └── catalogo.php 
 │       ├── carrito.php
+│       ├── catalogo.php
 │       ├── index.php
-│       ├── logout.php
 │       └── registro.php
 │
 ├── README.md  
