@@ -24,7 +24,12 @@
     --primary-color: #6c5ce7;       /* Púrpura principal */
     --primary-dark: #5b4fcf;        /* Púrpura más oscuro para hover */
     --secondary-color: #00cec9;     /* Turquesa de acento */
+    --secondary-dark: #252836;
     --accent-color: #fd79a8;        /* Rosado para elementos destacados */
+    --accent-purple: #7c3aed;
+    --accent-blue: #3b82f6;
+    --accent-pink: #ec4899;
+    
     
     /* Colores de fondo */
     --bg-dark: #1a1a2e;             /* Fondo oscuro principal */
@@ -35,6 +40,8 @@
     --text-primary: #ffffff;        /* Texto principal blanco */
     --text-secondary: #b8b8d1;      /* Texto secundario gris claro */
     --text-muted: #8a8aa3;          /* Texto apagado */
+    --text-light: #e5e7eb;
+    --text-gray: #9ca3af;
     
     --success-color: #00b894;       /* Verde para éxito */
     --error-color: #ff7675;         /* Rojo para errores */

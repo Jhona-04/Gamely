@@ -55,8 +55,8 @@ LOGO HEADER
     content: '';
     position: absolute;
     bottom: -10px;
-    left: 0; /* ← AÑADIDO: Alineado a izquierda */
-    transform: translateX(0); /* ← AÑADIDO: Sin centrado */
+    left: 50%; /* ← AÑADIDO: Alineado a izquierda */
+    transform: translateX(-50%); /* ← AÑADIDO: Centrado horizontalmente */
     width: 150px;
     height: 4px;
     background: linear-gradient(

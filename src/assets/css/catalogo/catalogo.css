@@ -55,3 +55,289 @@
     position: relative;
     z-index: 0;
 }
+
+/* ============================================
+    SECCIÓN CATALOGO
+============================================ */
+
+.section {
+    margin-bottom: 4rem;
+    padding: 0 4rem;
+    background: linear-gradient(to bottom, #2d2d44, #1a1a2e);
+}
+
+.section__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.section__title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, #7c3aed, #ec4899);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+}
+
+.section__title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-purple), var(--accent-pink));
+}
+
+/* Carousel */
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    gap: 1.5rem;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 1rem 0;
+}
+
+.carousel__controls {
+    display: flex;
+    gap: 1rem;
+}
+
+.carousel__button {
+    background: rgba(124, 58, 237, 0.2);
+    border: 2px solid var(--accent-purple);
+    color: var(--text-light);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.carousel__button:hover {
+    background: var(--accent-purple);
+    transform: scale(1.1);
+    box-shadow: 0 5px 20px rgba(124, 58, 237, 0.5);
+}
+
+/* Game Card */
+.game-card {
+    min-width: calc(16.666% - 1.25rem);
+    background: rgba(37, 40, 54, 0.8);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid transparent;
+    backdrop-filter: blur(10px);
+    position: relative;
+}
+
+.game-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: var(--accent-purple);
+    box-shadow: 0 15px 40px rgba(124, 58, 237, 0.4);
+}
+
+.game-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(236, 72, 153, 0.1));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.game-card:hover::before {
+    opacity: 1;
+}
+
+.game-card__image {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.game-card:hover .game-card__image {
+    transform: scale(1.1);
+}
+
+.game-card__info {
+    padding: 1.2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.game-card__name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-light);
+    letter-spacing: 0.5px;
+}
+
+.game-card__price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #10b981;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.game-card__discount-badge {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.game-card__original-price {
+    text-decoration: line-through;
+    color: var(--text-gray);
+    font-size: 1.1rem;
+}
+
+/* Gift Card Specific */
+.game-card--gift {
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.2), rgba(59, 130, 246, 0.2));
+}
+
+.game-card--gift .game-card__image {
+    height: 200px;
+    object-fit: contain;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 1400px) {
+    .game-card {
+        min-width: calc(20% - 1.2rem);
+    }
+}
+
+@media (max-width: 1024px) {
+    .game-card {
+        min-width: calc(25% - 1.125rem);
+    }
+    
+    .header {
+        padding: 1rem 2rem;
+    }
+    
+    .container {
+        padding: 0 2rem 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .game-card {
+        min-width: calc(33.333% - 1rem);
+    }
+    
+    .header__nav {
+        gap: 1.5rem;
+    }
+    
+    .header__nav-link {
+        font-size: 0.95rem;
+    }
+    
+    .section__title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .game-card {
+        min-width: calc(50% - 0.75rem);
+    }
+    
+    .header {
+        padding: 1rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .header__nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* Add to cart button */
+.game-card__button {
+    width: 100%;
+    background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
+    border: none;
+    color: white;
+    padding: 0.8rem;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 0.8rem;
+    transition: all 0.3s ease;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.game-card__button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(124, 58, 237, 0.5);
+}
+
+/* Platform badges */
+.game-card__platforms {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.game-card__platform-badge {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Loading animation */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.loading {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}

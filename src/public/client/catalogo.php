@@ -63,17 +63,17 @@
                     
                     <!-- Menú de navegación centrado -->
                     <div class="header-inferior__center">
-                        <a href="#" class="header-inferior__link">Inicio</a>
-                        <a href="#" class="header-inferior__link">Recomendados</a>
-                        <a href="#" class="header-inferior__link">Mejores juegos</a>
-                        <a href="#" class="header-inferior__link">Tarjetas Regalo</a>
+                        <a href="./catalogo.php" class="header-inferior__link">Inicio</a>
+                        <a href="#recomendados" class="header-inferior__link">Recomendados</a>
+                        <a href="#mejores" class="header-inferior__link">Mejores juegos</a>
+                        <a href="#tarjetas" class="header-inferior__link">Tarjetas Regalo</a>
                     </div>
                     
                     <!-- Acciones de usuario (derecha) -->
                     <div class="header-inferior__nav-right">
                         <a class="header-inferior__action-link" href="../carrito.php">
                             <i class="fa-solid fa-cart-shopping"></i>
-                            <span>Carrito</span>
+                            <span>Lista Compra</span>
                         </a>
                         <a class="header-inferior__action-link" href="../logout.php">
                             <i class="fa-solid fa-arrow-right-from-bracket"></i>
@@ -90,121 +90,331 @@
 
             <!-- Contenido principal del catálogo -->
             <main class="main__catalogo">
-                <div>
-                    <section>
-                        <h2 class="catalogo__title">Recomendaciones</h2>
-                        <div class="catalogo__grid">
-                            <!-- Aquí irían los productos recomendados -->
-                            <article></article>
+                <section id="recomendados" class="section">
+                    <div class="section__header">
+                        <h2 class="section__title">Juegos Recomendados 2025</h2>
+                        <div class="carousel__controls">
+                            <button class="carousel__button">‹</button>
+                            <button class="carousel__button">›</button>
                         </div>
-                    </section>
-                </div>
+                    </div>
+                    <div class="carousel-container">
+                        <div class="carousel" id="recommended-carousel">
+                            <!-- Baldur's Gate 3 -->
+                            <div class="game-card">
+                                <img src="./../../assets/images/galeria_cliente/Baldur's_Gate_3.jpg" alt="Baldur's Gate 3" class="game-card__image">
+                                <div class="game-card__info">
+                                    <h3 class="game-card__name">Baldur's Gate 3</h3>
+                                    <div class="game-card__platforms">
+                                        <span class="game-card__platform-badge">PC</span>
+                                        <span class="game-card__platform-badge">PS5</span>
+                                        <span class="game-card__platform-badge">XBOX</span>
+                                    </div>
+                                    <div class="game-card__price">
+                                        <span class="game-card__discount-badge">-20%</span>
+                                        <span>€47.99</span>
+                                        <span class="game-card__original-price">€59.99</span>
+                                    </div>
+                                    <button class="game-card__button">Añadir al carrito</button>
+                                </div>
+                            </div>
+
+                            <!-- Elden Ring: Shadow of the Erdtree -->
+                            <div class="game-card">
+                                <img src="./../../assets/images/galeria_cliente/Elden_Ring_Shadow_of_the_Erdtree.jpg" alt="Elden Ring DLC" class="game-card__image">
+                                <div class="game-card__info">
+                                    <h3 class="game-card__name">Elden Ring: Shadow of the Erdtree</h3>
+                                    <div class="game-card__platforms">
+                                        <span class="game-card__platform-badge">PC</span>
+                                        <span class="game-card__platform-badge">PS5</span>
+                                        <span class="game-card__platform-badge">XBOX</span>
+                                    </div>
+                                    <div class="game-card__price">
+                                        <span>€39.99</span>
+                                    </div>
+                                    <button class="game-card__button">Añadir al carrito</button>
+                                </div>
+                            </div>
+
+                            <!-- Cyberpunk 2077: Phantom Liberty -->
+                            <div class="game-card">
+                                <img src="./../../assets/images/galeria_cliente/Cyberpunk_2077_Ultimate_Edition.jpg" alt="Cyberpunk 2077" class="game-card__image">
+                                <div class="game-card__info">
+                                    <h3 class="game-card__name">Cyberpunk 2077: Ultimate Edition</h3>
+                                    <div class="game-card__platforms">
+                                        <span class="game-card__platform-badge">PC</span>
+                                        <span class="game-card__platform-badge">PS5</span>
+                                        <span class="game-card__platform-badge">XBOX</span>
+                                    </div>
+                                    <div class="game-card__price">
+                                        <span class="game-card__discount-badge">-35%</span>
+                                        <span>€38.99</span>
+                                        <span class="game-card__original-price">€59.99</span>
+                                    </div>
+                                    <button class="game-card__button">Añadir al carrito</button>
+                                </div>
+                            </div>
+
+                            <!-- Starfield -->
+                            <div class="game-card">
+                                <img src="./../../assets/images/galeria_cliente/Starfield.jpg" alt="Starfield" class="game-card__image">
+                                <div class="game-card__info">
+                                    <h3 class="game-card__name">Starfield</h3>
+                                    <div class="game-card__platforms">
+                                        <span class="game-card__platform-badge">PC</span>
+                                        <span class="game-card__platform-badge">XBOX</span>
+                                    </div>
+                                    <div class="game-card__price">
+                                        <span>€69.99</span>
+                                    </div>
+                                    <button class="game-card__button">Añadir al carrito</button>
+                                </div>
+                            </div>
+
+                            <!-- Hogwarts Legacy -->
+                            <div class="game-card">
+                                <img src="./../../assets/images/galeria_cliente/Hogwarts_Legacy.jpg" alt="Hogwarts Legacy" class="game-card__image">
+                                <div class="game-card__info">
+                                    <h3 class="game-card__name">Hogwarts Legacy</h3>
+                                    <div class="game-card__platforms">
+                                        <span class="game-card__platform-badge">PC</span>
+                                        <span class="game-card__platform-badge">PS5</span>
+                                        <span class="game-card__platform-badge">XBOX</span>
+                                        <span class="game-card__platform-badge">Switch</span>
+                                    </div>
+                                    <div class="game-card__price">
+                                        <span class="game-card__discount-badge">-25%</span>
+                                        <span>€44.99</span>
+                                        <span class="game-card__original-price">€59.99</span>
+                                    </div>
+                                    <button class="game-card__button">Añadir al carrito</button>
+                                </div>
+                            </div>
+
+                            <!-- The Legend of Zelda: Tears of the Kingdom -->
+                            <div class="game-card">
+                                <img src="./../../assets/images/galeria_cliente/Zelda_Tears_of_the_Kingdom.jpg" alt="Zelda TOTK" class="game-card__image">
+                                <div class="game-card__info">
+                                    <h3 class="game-card__name">Zelda: Tears of the Kingdom</h3>
+                                    <div class="game-card__platforms">
+                                        <span class="game-card__platform-badge">Switch</span>
+                                    </div>
+                                    <div class="game-card__price">
+                                        <span>€59.99</span>
+                                    </div>
+                                    <button class="game-card__button">Añadir al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Mejores Juegos -->
+                <section id="mejores" class="section">
+                    <div class="section__header">
+                        <h2 class="section__title">Mejores Juegos</h2>
+                        <div class="carousel__controls">
+                            <button class="carousel__button" onclick="scrollCarousel('best', -1)">‹</button>
+                            <button class="carousel__button" onclick="scrollCarousel('best', 1)">›</button>
+                        </div>
+                    </div>
+                    <div class="carousel-container">
+                        <div class="carousel" id="best-carousel">
+                            <!-- Red Dead Redemption 2 -->
+                            <div class="game-card">
+                                <img src="./../../assets/images/galeria_cliente/Red_Dead_Redemption_2.jpg" alt="Red Dead Redemption 2" class="game-card__image">
+                                <div class="game-card__info">
+                                    <h3 class="game-card__name">Red Dead Redemption 2</h3>
+                                    <div class="game-card__platforms">
+                                        <span class="game-card__platform-badge">PC</span>
+                                        <span class="game-card__platform-badge">PS5</span>
+                                        <span class="game-card__platform-badge">XBOX</span>
+                                    </div>
+                                    <div class="game-card__price">
+                                        <span class="game-card__discount-badge">-50%</span>
+                                        <span>€29.99</span>
+                                        <span class="game-card__original-price">€59.99</span>
+                                    </div>
+                                    <button class="game-card__button">Añadir al carrito</button>
+                                </div>
+                            </div>
+
+                            <!-- God of War Ragnarök -->
+                            <div class="game-card">
+                                <img src="./../../assets/images/galeria_cliente/God_of_War_Ragnarok.jpg" alt="God of War" class="game-card__image">
+                                <div class="game-card__info">
+                                    <h3 class="game-card__name">God of War Ragnarök</h3>
+                                    <div class="game-card__platforms">
+                                        <span class="game-card__platform-badge">PC</span>
+                                        <span class="game-card__platform-badge">PS5</span>
+                                    </div>
+                                    <div class="game-card__price">
+                                        <span>€59.99</span>
+                                    </div>
+                                    <button class="game-card__button">Añadir al carrito</button>
+                                </div>
+                            </div>
+
+                            <!-- Final Fantasy XVI -->
+                            <div class="game-card">
+                                <img src="./../../assets/images/galeria_cliente/Final_Fantasy_XVI.png" alt="Final Fantasy XVI" class="game-card__image">
+                                <div class="game-card__info">
+                                    <h3 class="game-card__name">Final Fantasy XVI</h3>
+                                    <div class="game-card__platforms">
+                                        <span class="game-card__platform-badge">PC</span>
+                                        <span class="game-card__platform-badge">PS5</span>
+                                    </div>
+                                    <div class="game-card__price">
+                                        <span class="game-card__discount-badge">-30%</span>
+                                        <span>€48.99</span>
+                                        <span class="game-card__original-price">€69.99</span>
+                                    </div>
+                                    <button class="game-card__button">Añadir al carrito</button>
+                                </div>
+                            </div>
+
+                            <!-- Spider-Man 2 -->
+                            <div class="game-card">
+                                <img src="./../../assets/images/galeria_cliente/Marvel's_Spider-Man_2.jpg" alt="Spider-Man 2" class="game-card__image">
+                                <div class="game-card__info">
+                                    <h3 class="game-card__name">Marvel's Spider-Man 2</h3>
+                                    <div class="game-card__platforms">
+                                        <span class="game-card__platform-badge">PS5</span>
+                                    </div>
+                                    <div class="game-card__price">
+                                        <span>€69.99</span>
+                                    </div>
+                                    <button class="game-card__button">Añadir al carrito</button>
+                                </div>
+                            </div>
+
+                            <!-- Resident Evil 4 Remake -->
+                            <div class="game-card">
+                                <img src="./../../assets/images/galeria_cliente/Resident_Evil_4_Remake.jpg" alt="Resident Evil 4" class="game-card__image">
+                                <div class="game-card__info">
+                                    <h3 class="game-card__name">Resident Evil 4 Remake</h3>
+                                    <div class="game-card__platforms">
+                                        <span class="game-card__platform-badge">PC</span>
+                                        <span class="game-card__platform-badge">PS5</span>
+                                        <span class="game-card__platform-badge">XBOX</span>
+                                    </div>
+                                    <div class="game-card__price">
+                                        <span class="game-card__discount-badge">-40%</span>
+                                        <span>€35.99</span>
+                                        <span class="game-card__original-price">€59.99</span>
+                                    </div>
+                                    <button class="game-card__button">Añadir al carrito</button>
+                                </div>
+                            </div>
+
+                            <!-- Alan Wake 2 -->
+                            <div class="game-card">
+                                <img src="./../../assets/images/galeria_cliente/Alan_Wake_2.jpg" alt="Alan Wake 2" class="game-card__image">
+                                <div class="game-card__info">
+                                    <h3 class="game-card__name">Alan Wake 2</h3>
+                                    <div class="game-card__platforms">
+                                        <span class="game-card__platform-badge">PC</span>
+                                        <span class="game-card__platform-badge">PS5</span>
+                                        <span class="game-card__platform-badge">XBOX</span>
+                                    </div>
+                                    <div class="game-card__price">
+                                        <span>€49.99</span>
+                                    </div>
+                                    <button class="game-card__button">Añadir al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tarjetas Regalo -->
+                <section id="tarjetas" class="section">
+                    <div class="section__header">
+                        <h2 class="section__title">Tarjetas Regalo</h2>
+                        <div class="carousel__controls">
+                            <button class="carousel__button" onclick="scrollCarousel('gift', -1)">‹</button>
+                            <button class="carousel__button" onclick="scrollCarousel('gift', 1)">›</button>
+                        </div>
+                    </div>
+                    <div class="carousel-container">
+                        <div class="carousel" id="gift-carousel">
+                            <!-- PlayStation Plus -->
+                            <div class="game-card game-card--gift">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 150'%3E%3Crect fill='%230070cc' width='200' height='150'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-size='24' font-weight='bold'%3EPS Plus%3C/text%3E%3C/svg%3E" alt="PlayStation Plus" class="game-card__image">
+                                <div class="game-card__info">
+                                    <h3 class="game-card__name">PlayStation Plus (12 meses)</h3>
+                                    <div class="game-card__price">
+                                        <span>€59.99</span>
+                                    </div>
+                                    <button class="game-card__button">Añadir al carrito</button>
+                                </div>
+                            </div>
+
+                            <!-- Xbox Game Pass Ultimate -->
+                            <div class="game-card game-card--gift">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 150'%3E%3Crect fill='%23107c10' width='200' height='150'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-size='20' font-weight='bold'%3EGame Pass%3C/text%3E%3C/svg%3E" alt="Xbox Game Pass" class="game-card__image">
+                                <div class="game-card__info">
+                                    <h3 class="game-card__name">Xbox Game Pass Ultimate (12 meses)</h3>
+                                    <div class="game-card__price">
+                                        <span>€143.88</span>
+                                    </div>
+                                    <button class="game-card__button">Añadir al carrito</button>
+                                </div>
+                            </div>
+
+                            <!-- Nintendo Switch Online -->
+                            <div class="game-card game-card--gift">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 150'%3E%3Crect fill='%23e60012' width='200' height='150'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-size='18' font-weight='bold'%3ENintendo Online%3C/text%3E%3C/svg%3E" alt="Nintendo Switch Online" class="game-card__image">
+                                <div class="game-card__info">
+                                    <h3 class="game-card__name">Nintendo Switch Online (12 meses)</h3>
+                                    <div class="game-card__price">
+                                        <span>€19.99</span>
+                                    </div>
+                                    <button class="game-card__button">Añadir al carrito</button>
+                                </div>
+                            </div>
+
+                            <!-- EA Play -->
+                            <div class="game-card game-card--gift">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 150'%3E%3Crect fill='%23ff6c00' width='200' height='150'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-size='24' font-weight='bold'%3EEA Play%3C/text%3E%3C/svg%3E" alt="EA Play" class="game-card__image">
+                                <div class="game-card__info">
+                                    <h3 class="game-card__name">EA Play (12 meses)</h3>
+                                    <div class="game-card__price">
+                                        <span>€29.99</span>
+                                    </div>
+                                    <button class="game-card__button">Añadir al carrito</button>
+                                </div>
+                            </div>
+
+                            <!-- Steam Wallet -->
+                            <div class="game-card game-card--gift">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 150'%3E%3Crect fill='%23171a21' width='200' height='150'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-size='22' font-weight='bold'%3ESteam Card%3C/text%3E%3C/svg%3E" alt="Steam Wallet" class="game-card__image">
+                                <div class="game-card__info">
+                                    <h3 class="game-card__name">Tarjeta Steam €50</h3>
+                                    <div class="game-card__price">
+                                        <span>€50.00</span>
+                                    </div>
+                                    <button class="game-card__button">Añadir al carrito</button>
+                                </div>
+                            </div>
+
+                            <!-- Ubisoft+ -->
+                            <div class="game-card game-card--gift">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 150'%3E%3Crect fill='%232a5bd7' width='200' height='150'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-size='24' font-weight='bold'%3EUbisoft%2B%3C/text%3E%3C/svg%3E" alt="Ubisoft+" class="game-card__image">
+                                <div class="game-card__info">
+                                    <h3 class="game-card__name">Ubisoft+ (12 meses)</h3>
+                                    <div class="game-card__price">
+                                        <span>€179.88</span>
+                                    </div>
+                                    <button class="game-card__button">Añadir al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </main>
-
-            <!-- Footer -->
-            <footer class="footer">
-                <section class= "footer__top">
-                    <article class="about">
-                        <h3 class="footer__title">Sobre <span class="footer__color">Nosotros</span></h3>
-                        <p class="footer__text">Desbloquea equipo exclusivo, aspectos raros y mejoras poderosas. Mejora tu experiencia de juego con artículos premium disponibles directamente en la tienda del juego.</p>
-                        
-                        <nav class="footer__nav">
-                            <ul class="footer__list">
-                                <li class="footer__item"><a href="#" class="footer__link">Inicio</a></li>
-                                <li class="footer__item"><a href="#" class="footer__link">Recomendados</a></li>
-                                <li class="footer__item"><a href="#" class="footer__link">Mejores juegos</a></li>
-                                <li class="footer__item"><a href="#" class="footer__link">Tarjetas Regalo</a></li>
-                            </ul>
-
-                            <ul class="footer__list">
-                                <li class="footer__item"><a href="#" class="footer__link">Soporte</a></li>
-                                <li class="footer__item"><a href="#" class="footer__link">Términos de Servicio</a></li>
-                                <li class="footer__item"><a href="#" class="footer__link">Política de Privacidad</a></li>
-                                <li class="footer__item"><a href="#" class="footer__link">Contacto</a></li>
-                            </ul>
-                        </nav>
-                    </article>
-
-                    <!-- LASTEST -->
-                    <article class="latest">
-                        <h3 class="footer__title">Últimas <span class="footer__color">Noticias</span></h3>
-                        <div class="footer__cards">
-                            <!-- CARD1 -->
-                            <div class="footer__card">
-                                <img src="./../../assets/images/footer_images/gallery-3-90x65.jpg" alt="foto1" class="footer__card-img">
-                                <div class="footer__card-content">
-                                    <h4 class="footer__card-title">Lanzamiento de nuevo juego</h4>
-                                    <div class="footer__card-divider">
-                                        <i class="footer__card-text fa-regular fa-clock"></i>
-                                        <p class="footer__card-text">Enero 2, 2024</p>
-                                    </div>                               
-                                </div>
-                            </div>
-                            <!-- CARD2 -->
-                            <div class="footer__card">
-                                <img src="./../../assets/images/footer_images/post-1-90x65.jpg" alt="foto2" class="footer__card-img">
-                                <div class="footer__card-content">
-                                    <h4 class="footer__card-title">¡Se ha lanzado un nuevo tráiler!</h4>
-                                    <div class="footer__card-divider">
-                                        <i class="footer__card-text fa-regular fa-clock"></i>
-                                        <p class="footer__card-text">Enero 12, 2024</p>
-                                    </div> 
-                                </div>
-                            </div>
-                            <!-- CARD3 -->
-                            <div class="footer__card">
-                                <img src="./../../assets/images/footer_images/video-post-90x65.jpg" alt="foto3" class="footer__card-img">
-                                <div class="footer__card-content">
-                                    <h4 class="footer__card-title">Lista de precios de los juegos</h4>
-                                    <div class="footer__card-divider">
-                                        <i class="footer__card-text fa-regular fa-clock"></i>
-                                        <p class="footer__card-text">Enero 25, 2024</p>
-                                    </div> 
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <!-- APP & PLATAFORMAS -->
-                    <article class="apps-platforms">
-                        <h3 class="footer__title">APP <span class="footer__color">& PLATAFORMAS</span></h3>
-                        <div class="app__container">
-                            <!-- app1 -->
-                            <div class="app__card">
-                                <i class="app__icon fa-brands fa-apple"></i>
-                                <p class="app__text">Comprar ahora a través de Google Play</p>
-                            </div>
-                            <!-- app2 -->
-                            <div class="app__card">
-                                <i class="app__icon fa-brands fa-google-play"></i>
-                                <p class="app__text">Comprar ahora a través de App Store</p>
-                            </div>
-                            <!-- app3 -->
-                            <div class="app__card">
-                                <i class="app__icon fa-brands fa-steam"></i>
-                                <p class="app__text">Comprar ahora a través de Steam</p>
-                            </div>
-                            <!-- app4 -->
-                            <div class="app__card">
-                                <i class="app__icon fa-brands fa-amazon"></i>
-                                <p class="app__text">Comprar ahora a través de Amazon</p>
-                            </div>
-                            <!-- app5 -->
-                            <div class="app__card">
-                                <i class="app__icon fa-brands fa-windows"></i>
-                                <p class="app__text">Comprar ahora a través de Microsoft</p>
-                            </div>
-                            <!-- app6 -->
-                            <div class="app__card">
-                                <i class="app__icon fa-brands fa-paypal"></i>
-                                <p class="app__text">Comprar ahora a través de PayPal</p>
-                            </div>
-                        </div>
-                    </article>
-                </section>
-                <section class="footer__bottom">
-                    <p class="footer__text">&copy; 2026 Gamely. Todos los derechos reservados.</p>
-                </section>
-            </footer>
         </div>
+        <!-- Script JS -->
+        <script src="../../assets/scripts/script.js"></script>
     </body>
 </html>
