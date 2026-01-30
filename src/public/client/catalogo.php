@@ -73,7 +73,7 @@
                     <div class="header-inferior__nav-right">
                         <a class="header-inferior__action-link" href="../carrito.php">
                             <i class="fa-solid fa-cart-shopping"></i>
-                            <span>Lista Compra</span>
+                            <span>Carrito</span>
                         </a>
                         <a class="header-inferior__action-link" href="../logout.php">
                             <i class="fa-solid fa-arrow-right-from-bracket"></i>
@@ -100,6 +100,111 @@
                     </section>
                 </div>
             </main>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <section class= "footer__top">
+                    <article class="about">
+                        <h3 class="footer__title">Sobre <span class="footer__color">Nosotros</span></h3>
+                        <p class="footer__text">Desbloquea equipo exclusivo, aspectos raros y mejoras poderosas. Mejora tu experiencia de juego con artículos premium disponibles directamente en la tienda del juego.</p>
+                        
+                        <nav class="footer__nav">
+                            <ul class="footer__list">
+                                <li class="footer__item"><a href="#" class="footer__link">Inicio</a></li>
+                                <li class="footer__item"><a href="#" class="footer__link">Recomendados</a></li>
+                                <li class="footer__item"><a href="#" class="footer__link">Mejores juegos</a></li>
+                                <li class="footer__item"><a href="#" class="footer__link">Tarjetas Regalo</a></li>
+                            </ul>
+
+                            <ul class="footer__list">
+                                <li class="footer__item"><a href="#" class="footer__link">Soporte</a></li>
+                                <li class="footer__item"><a href="#" class="footer__link">Términos de Servicio</a></li>
+                                <li class="footer__item"><a href="#" class="footer__link">Política de Privacidad</a></li>
+                                <li class="footer__item"><a href="#" class="footer__link">Contacto</a></li>
+                            </ul>
+                        </nav>
+                    </article>
+
+                    <!-- LASTEST -->
+                    <article class="latest">
+                        <h3 class="footer__title">Últimas <span class="footer__color">Noticias</span></h3>
+                        <div class="footer__cards">
+                            <!-- CARD1 -->
+                            <div class="footer__card">
+                                <img src="./../../assets/images/footer_images/gallery-3-90x65.jpg" alt="foto1" class="footer__card-img">
+                                <div class="footer__card-content">
+                                    <h4 class="footer__card-title">Lanzamiento de nuevo juego</h4>
+                                    <div class="footer__card-divider">
+                                        <i class="footer__card-text fa-regular fa-clock"></i>
+                                        <p class="footer__card-text">Enero 2, 2024</p>
+                                    </div>                               
+                                </div>
+                            </div>
+                            <!-- CARD2 -->
+                            <div class="footer__card">
+                                <img src="./../../assets/images/footer_images/post-1-90x65.jpg" alt="foto2" class="footer__card-img">
+                                <div class="footer__card-content">
+                                    <h4 class="footer__card-title">¡Se ha lanzado un nuevo tráiler!</h4>
+                                    <div class="footer__card-divider">
+                                        <i class="footer__card-text fa-regular fa-clock"></i>
+                                        <p class="footer__card-text">Enero 12, 2024</p>
+                                    </div> 
+                                </div>
+                            </div>
+                            <!-- CARD3 -->
+                            <div class="footer__card">
+                                <img src="./../../assets/images/footer_images/video-post-90x65.jpg" alt="foto3" class="footer__card-img">
+                                <div class="footer__card-content">
+                                    <h4 class="footer__card-title">Lista de precios de los juegos</h4>
+                                    <div class="footer__card-divider">
+                                        <i class="footer__card-text fa-regular fa-clock"></i>
+                                        <p class="footer__card-text">Enero 25, 2024</p>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- APP & PLATAFORMAS -->
+                    <article class="apps-platforms">
+                        <h3 class="footer__title">APP <span class="footer__color">& PLATAFORMAS</span></h3>
+                        <div class="app__container">
+                            <!-- app1 -->
+                            <div class="app__card">
+                                <i class="app__icon fa-brands fa-apple"></i>
+                                <p class="app__text">Comprar ahora a través de Google Play</p>
+                            </div>
+                            <!-- app2 -->
+                            <div class="app__card">
+                                <i class="app__icon fa-brands fa-google-play"></i>
+                                <p class="app__text">Comprar ahora a través de App Store</p>
+                            </div>
+                            <!-- app3 -->
+                            <div class="app__card">
+                                <i class="app__icon fa-brands fa-steam"></i>
+                                <p class="app__text">Comprar ahora a través de Steam</p>
+                            </div>
+                            <!-- app4 -->
+                            <div class="app__card">
+                                <i class="app__icon fa-brands fa-amazon"></i>
+                                <p class="app__text">Comprar ahora a través de Amazon</p>
+                            </div>
+                            <!-- app5 -->
+                            <div class="app__card">
+                                <i class="app__icon fa-brands fa-windows"></i>
+                                <p class="app__text">Comprar ahora a través de Microsoft</p>
+                            </div>
+                            <!-- app6 -->
+                            <div class="app__card">
+                                <i class="app__icon fa-brands fa-paypal"></i>
+                                <p class="app__text">Comprar ahora a través de PayPal</p>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+                <section class="footer__bottom">
+                    <p class="footer__text">&copy; 2026 Gamely. Todos los derechos reservados.</p>
+                </section>
+            </footer>
         </div>
     </body>
 </html>
