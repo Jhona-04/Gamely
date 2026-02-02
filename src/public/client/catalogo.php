@@ -48,10 +48,10 @@
                         
                         <!-- Usuario a la derecha -->
                         <section class="header-superior__user">
-                            <h2 class="header-superior__welcome">
+                            <a href="./../admin/admin_dashboard.php" class="header-superior__welcome">
                                 <i class="fa-solid fa-user"></i>
                                 Bienvenido/a, <?php echo htmlspecialchars($_SESSION['nombre']); ?>!
-                            </h2>
+                            </a>
                         </section>
                     </section>
                 </section>

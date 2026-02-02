@@ -106,7 +106,7 @@ TEXT HEADER - USUARIO
     display: flex;
     align-items: center;
     gap: 8px;
-
+    text-decoration: none;
 }
 .header-superior__welcome:hover {
     color: var(--primary-color);
@@ -114,7 +114,6 @@ TEXT HEADER - USUARIO
     border-bottom: 1px solid var(--primary-color);
     cursor: pointer;
 }
-
 
 .header-superior__nav {
     display: flex;
