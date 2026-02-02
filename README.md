@@ -50,6 +50,8 @@ Este proyecto se desarrolla como parte de la asignatura **Desarrollo Web en Ento
 ├── /src
 │   ├── /assets
 │   │   ├── /css
+│   │   │   ├── /admin
+│   │   │   │   └── admin.css   # Estilos del panel admin
 │   │   │   ├── /carrito
 │   │   │   │   └── carrito.css   # Estilos del carrito
 │   │   │   ├── /catalogo
@@ -61,6 +63,7 @@ Este proyecto se desarrolla como parte de la asignatura **Desarrollo Web en Ento
 │   │   │   ├── menu.css
 │   │   │   └── style.css
 │   │   └── /images               # Imágenes del sitio
+│   │   └── /scripts              # Scripts
 │   │
 │   ├── /functions
 │   │   └── funciones.php         # Funciones reutilizables
@@ -68,6 +71,7 @@ Este proyecto se desarrolla como parte de la asignatura **Desarrollo Web en Ento
 │   └── /public
 │       ├── /admin   
 │       │   └── admin_dashboard.php   
+│       │   └── usuarios.php     
 │       ├── /client   
 │       │   └── catalogo.php 
 │       ├── carrito.php
