@@ -76,6 +76,8 @@ body {
     position: relative;
     overflow-x: hidden; 
     background-color: var(--bg-dark);
+    margin: 0;
+    padding: 0;
 }
 
 body::before {

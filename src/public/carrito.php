@@ -387,13 +387,33 @@
                     <h3 class="footer__title">Últimas <span class="footer__color">Noticias</span></h3>
                     <section class="footer__cards">
                         <article class="footer__card">
-                            <img src="../assets/images/footer_images/gallery-3-90x65.jpg" alt="foto1" class="footer__card-img">
+                            <img src="./../assets/images/footer_images/gallery-3-90x65.jpg" alt="foto1" class="footer__card-img">
                             <section class="footer__card-content">
                                 <h4 class="footer__card-title">Lanzamiento de nuevo juego</h4>
                                 <section class="footer__card-divider">
                                     <i class="footer__card-text fa-regular fa-clock"></i>
                                     <p class="footer__card-text">Enero 2, 2024</p>
                                 </section>                               
+                            </section>
+                        </article>
+                        <article class="footer__card">
+                            <img src="./../assets/images/footer_images/post-1-90x65.jpg" alt="foto2" class="footer__card-img">
+                            <section class="footer__card-content">
+                                <h4 class="footer__card-title">¡Se ha lanzado un nuevo tráiler!</h4>
+                                <section class="footer__card-divider">
+                                    <i class="footer__card-text fa-regular fa-clock"></i>
+                                    <p class="footer__card-text">Enero 12, 2024</p>
+                                </section> 
+                            </section>
+                        </article>
+                        <article class="footer__card">
+                            <img src="./../assets/images/footer_images/video-post-90x65.jpg" alt="foto3" class="footer__card-img">
+                            <section class="footer__card-content">
+                                <h4 class="footer__card-title">Lista de precios de los juegos</h4>
+                                <section class="footer__card-divider">
+                                    <i class="footer__card-text fa-regular fa-clock"></i>
+                                    <p class="footer__card-text">Enero 25, 2024</p>
+                                </section> 
                             </section>
                         </article>
                     </section>
@@ -410,12 +430,28 @@
                             <i class="app__icon fa-brands fa-google-play"></i>
                             <p class="app__text">Comprar ahora a través de Google Play</p>
                         </article>
+                        <article class="app__card">
+                            <i class="app__icon fa-brands fa-steam"></i>
+                            <p class="app__text">Comprar ahora a través de Steam</p>
+                        </article>
+                        <article class="app__card">
+                            <i class="app__icon fa-brands fa-amazon"></i>
+                            <p class="app__text">Comprar ahora a través de Amazon</p>
+                        </article>
+                        <article class="app__card">
+                            <i class="app__icon fa-brands fa-windows"></i>
+                            <p class="app__text">Comprar ahora a través de Microsoft</p>
+                        </article>
+                        <article class="app__card">
+                            <i class="app__icon fa-brands fa-paypal"></i>
+                            <p class="app__text">Comprar ahora a través de PayPal</p>
+                        </article>
                     </section>
                 </article>
             </section>
-            <section class="footer__bottom">
+            <footer class="footer__bottom">
                 <p class="footer__text">&copy; 2026 Gamely. Todos los derechos reservados.</p>
-            </section>
+            </footer>
         </footer>
     </section>
 </body>
