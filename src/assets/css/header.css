@@ -1,5 +1,5 @@
 /* ============================================
-    HEADER SUPERIOR
+   HEADER - MOBILE FIRST
    ============================================ */
 
 .header {
@@ -7,47 +7,52 @@
     flex-direction: column;
 }
 
-.header-superior__size {
-    width: 100%;
-    /* max-width: 1200px; */ /* ← Para que coga todo el ancho */
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-}
+/* ============================================
+   HEADER SUPERIOR
+   ============================================ */
 
 .header-superior {
-    padding: 0 var(--space-lg);
+    padding: var(--space-sm) var(--space-md);
     width: 100%;
     background-color: var(--bg-dark);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: var(--space-sm) 0;
 }
+
+.header-superior__size {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    justify-content: center;
+    align-items: center;
+}
+
 /* ============================================
-LOGO HEADER
-============================================ */
+   LOGO HEADER
+   ============================================ */
 
 .header-superior__logo-logo {
     font-family: 'Roboto', sans-serif;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 900;
-    text-align: left; /* ← AÑADIDO: Alineado a izquierda */
+    text-align: center;
     letter-spacing: -1px;
     position: relative;
     margin-top: 10px;
     width: 100%;
     color: var(--primary-color);
-    margin-left: 0; /* ← AÑADIDO: Sin margen */
+    margin-left: 0;
 }
 
 /* Efecto de brillo */
 .header-superior__logo-logo {
     text-shadow: 
-    0 0 15px rgba(108, 92, 231, 0.7),  
-    0 0 25px rgba(108, 92, 231, 0.4), 
-    0 0 35px rgba(0, 206, 201, 0.2); 
+        0 0 15px rgba(108, 92, 231, 0.7),  
+        0 0 25px rgba(108, 92, 231, 0.4), 
+        0 0 35px rgba(0, 206, 201, 0.2);
 }
 
 /* Línea debajo del título */
@@ -55,9 +60,9 @@ LOGO HEADER
     content: '';
     position: absolute;
     bottom: -10px;
-    left: 50%; /* ← AÑADIDO: Alineado a izquierda */
-    transform: translateX(-50%); /* ← AÑADIDO: Centrado horizontalmente */
-    width: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
     height: 4px;
     background: linear-gradient(
         90deg, 
@@ -65,111 +70,76 @@ LOGO HEADER
         var(--primary-color), 
         var(--secondary-color), 
         transparent
-        );
-        border-radius: 2px;
+    );
+    border-radius: 2px;
     opacity: 0.8;
 }
 
-.log__subtitle {
-    font-size: 1.5rem;
-    font-weight: 600;
-    text-align: center;
-    margin-bottom: var(--space-lg);
-    color: var(--text-secondary);
-    position: relative;
-}
-
-.log__subtitle::after {
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 3px;
-    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-    border-radius: 2px;
-}
 /* ============================================
-TEXT HEADER - USUARIO
-============================================ */
+   TEXT HEADER - USUARIO
+   ============================================ */
 
-.header-superior__user { /* ← AÑADIDO: Contenedor usuario */
+.header-superior__user {
     display: flex;
     align-items: center;
-    gap: var(--space-md);
+    justify-content: center;
+    gap: var(--space-sm);
 }
 
 .header-superior__welcome {
     color: var(--text-primary);
-    font-size: 1.2rem; /* ← AÑADIDO: Cambié el tamaño de fuente */
+    font-size: 1rem;
     display: flex;
     align-items: center;
     gap: 8px;
     text-decoration: none;
+    transition: color var(--transition-normal);
 }
+
 .header-superior__welcome:hover {
     color: var(--primary-color);
-    transition: color var(--transition-normal);
     border-bottom: 1px solid var(--primary-color);
     cursor: pointer;
 }
 
-.header-superior__nav {
-    display: flex;
-    gap: var(--space-lg);
-}
-
-.header-superior__link {
-    color: var(--text-primary);
-    text-decoration: none;
-}
 /* ============================================
-    HEADER INFERIOR
+   HEADER INFERIOR
    ============================================ */
 
 .header-inferior {
     width: 100%;
     background-color: var(--bg-card);
     display: flex;
-    justify-content: space-between; /* ← AÑADIDO: Para separar centro y derecha */
+    flex-direction: column;
+    gap: var(--space-sm);
     align-items: center;
-    padding: var(--space-sm) var(--space-lg);
-    position: relative; /* ← AÑADIDO: Para posicionamiento absoluto del centro */
+    padding: var(--space-sm) var(--space-md);
 }
 
+.header-inferior__spacer {
+    display: none;
+}
 
-/* AÑADIDO: Menú centrado */
+/* Menú centrado */
 .header-inferior__center {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
     display: flex;
-    gap: var(--space-xl);
-}
-
-/* AÑADIDO: Acciones de usuario derecha */
-.header-inferior__nav-right {
-    display: flex;
-    gap: var(--space-lg);
-}
-
-.header-inferior__list {
-    display: flex;
-    gap: var(--space-xl);
-}
-
-.header-inferior__item {
-    list-style: none;
+    flex-direction: column;
+    gap: var(--space-sm);
+    width: 100%;
+    align-items: center;
 }
 
 .header-inferior__link {
     color: var(--text-secondary);
     text-decoration: none;
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: 1rem;
     position: relative;
+    padding: var(--space-xs) 0;
+    text-align: center;
+    display: inline-block;
 }
+
 .header-inferior__link::after {
     content: '';
     position: absolute;
@@ -180,11 +150,19 @@ TEXT HEADER - USUARIO
     background-color: var(--primary-color);
     transition: width var(--transition-normal);
 }
+
 .header-inferior__link:hover::after {
     width: 100%;
 }
 
-/* AÑADIDO: Estilos para acciones de usuario */
+/* Acciones de usuario derecha */
+.header-inferior__nav-right {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    width: 100%;
+}
+
 .header-inferior__action-link {
     color: var(--text-secondary);
     text-decoration: none;
@@ -192,6 +170,7 @@ TEXT HEADER - USUARIO
     font-size: 1rem;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
     padding: 8px 16px;
     border-radius: var(--border-radius);
@@ -206,3 +185,110 @@ TEXT HEADER - USUARIO
     border-color: var(--primary-color);
 }
 
+/* ============================================
+   TABLET - MIN-WIDTH 768px
+   ============================================ */
+
+@media screen and (min-width: 768px) {
+    .header-superior {
+        padding: var(--space-sm) var(--space-lg);
+    }
+
+    .header-superior__size {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .header-superior__logo-logo {
+        font-size: 2.5rem;
+        text-align: left;
+    }
+
+    .header-superior__logo-logo::after {
+        width: 120px;
+        left: 50%;
+    }
+
+    .header-superior__user {
+        justify-content: flex-end;
+    }
+
+    .header-superior__welcome {
+        font-size: 1.1rem;
+    }
+
+    .header-inferior {
+        flex-direction: row;
+        justify-content: center;
+        padding: var(--space-sm) var(--space-lg);
+    }
+
+    .header-inferior__center {
+        flex-direction: row;
+        gap: var(--space-lg);
+        width: auto;
+    }
+
+    .header-inferior__link {
+        font-size: 1.05rem;
+        padding: 0;
+    }
+
+    .header-inferior__nav-right {
+        flex-direction: row;
+        gap: var(--space-md);
+        width: auto;
+    }
+}
+
+/* ============================================
+   DESKTOP - MIN-WIDTH 1024px
+   ============================================ */
+
+@media screen and (min-width: 1024px) {
+    .header-superior {
+        padding: var(--space-sm) 0;
+    }
+
+    .header-superior__size {
+        padding: 0 var(--space-lg);
+    }
+
+    .header-superior__logo-logo {
+        font-size: 3rem;
+    }
+
+    .header-superior__logo-logo::after {
+        width: 150px;
+    }
+
+    .header-superior__welcome {
+        font-size: 1.2rem;
+    }
+
+    .header-inferior {
+        justify-content: space-between;
+        padding: var(--space-sm) var(--space-lg);
+        position: relative;
+    }
+
+    .header-inferior__spacer {
+        display: block;
+        flex: 1;
+    }
+
+    .header-inferior__center {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        gap: var(--space-xl);
+    }
+
+    .header-inferior__link {
+        font-size: 1.1rem;
+    }
+
+    .header-inferior__nav-right {
+        gap: var(--space-lg);
+    }
+}

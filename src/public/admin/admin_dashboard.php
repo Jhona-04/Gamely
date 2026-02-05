@@ -2,10 +2,10 @@
     require "./../../../database/config/database.php";
     require "./../../functions/funciones.php";
 
-    // Verificar que sea admin
+    //Verificar que sea admin
     requiereAdmin();
 
-    // Obtener estadísticas
+    //Obtener estadísticas
     $stmt = $pdo->query("SELECT COUNT(*) as total FROM usuarios");
     $totalUsuarios = $stmt->fetch()['total'];
 
@@ -15,7 +15,7 @@
     $stmt = $pdo->query("SELECT COUNT(*) as total FROM usuarios WHERE rol = 'admin'");
     $totalAdmins = $stmt->fetch()['total'];
 
-    // Últimos usuarios registrados
+    //Últimos usuarios registrados
     $stmt = $pdo->query("SELECT id, nombre, usuario, rol FROM usuarios ORDER BY id ASC");
     $ultimosUsuarios = $stmt->fetchAll();
 ?>

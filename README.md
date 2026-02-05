@@ -46,6 +46,8 @@ Este proyecto se desarrolla como parte de la asignatura **Desarrollo Web en Ento
 │   │   └── database.php          # Configuración de la base de datos
 │   └── /schemas
 │       └── schema.php            # Estructura de tablas
+├── /logs
+│   ├── /app.log                  # logs del Servidor
 │
 ├── /src
 │   ├── /assets
@@ -60,10 +62,13 @@ Este proyecto se desarrolla como parte de la asignatura **Desarrollo Web en Ento
 │   │   │   │   └── login.css     # Estilos del login/registro
 │   │   │   ├── footer.css
 │   │   │   ├── header.css
-│   │   │   ├── menu.css
 │   │   │   └── style.css
-│   │   └── /images               # Imágenes del sitio
-│   │   └── /scripts              # Scripts
+│   │   └── /images               # Imágenes del sitio  
+|   |   └── /js
+|   |       └──script.js          # Scripts 
+│   │
+|   ├── /components
+|   |   └── cookie_banner.php     # Banner Aceptar cookies
 │   │
 │   ├── /functions
 │   │   └── funciones.php         # Funciones reutilizables

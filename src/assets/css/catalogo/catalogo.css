@@ -35,6 +35,7 @@
         transform: scale(1.1) translateX(0) translateY(0);
     }
 }
+
 .imagen-principal::before {
     content: '';
     position: absolute;
@@ -104,7 +105,6 @@
 .carousel {
     display: flex;
     gap: 1.5rem;
-    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     padding: 1rem 0;
 }
 
@@ -142,10 +142,14 @@
     border-radius: 12px;
     overflow: hidden;
     cursor: pointer;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     border: 2px solid transparent;
     backdrop-filter: blur(10px);
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
 }
 
 .game-card:hover {
@@ -225,13 +229,6 @@
     background: linear-gradient(135deg, rgba(124, 58, 237, 0.2), rgba(59, 130, 246, 0.2));
 }
 
-.game-card--gift .game-card__image {
-    height: 200px;
-    object-fit: contain;
-    background: rgba(255, 255, 255, 0.05);
-    padding: 2rem;
-}
-
 /* Responsive */
 @media (max-width: 1400px) {
     .game-card {
@@ -288,9 +285,8 @@
     }
 }
 
-/* Add to cart button */
 .game-card__button {
-    width: 100%;
+    width: 90%;
     background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
     border: none;
     color: white;
@@ -303,6 +299,9 @@
     font-family: 'Rajdhani', sans-serif;
     font-size: 1rem;
     letter-spacing: 0.5px;
+    text-align: center;
+    text-decoration: none;
+    z-index: 2;
 }
 
 .game-card__button:hover {
@@ -310,7 +309,6 @@
     box-shadow: 0 8px 20px rgba(124, 58, 237, 0.5);
 }
 
-/* Platform badges */
 .game-card__platforms {
     display: flex;
     gap: 0.5rem;
@@ -338,6 +336,20 @@
     }
 }
 
-.loading {
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+/* Contador del carrito en el header */
+.carrito-contador {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -8px;
+    left: -4px;
+    box-shadow: 0 2px 6px rgba(239,68,68,0.4);
 }

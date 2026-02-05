@@ -1,7 +1,6 @@
 /* ============================================
    CONTAINER
    ============================================ */
-
 .container {
     padding: 15px;
     min-width: 480px;
@@ -12,7 +11,6 @@
 /* ============================================
    HEADER ADMIN
    ============================================ */
-
 .header {
     margin-bottom: 20px;
     padding: 20px;
@@ -44,7 +42,6 @@
 /* ============================================
    ESTADÍSTICAS
    ============================================ */
-
 .stats-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -82,7 +79,6 @@
 /* ============================================
    MENÚ DE GESTIÓN
    ============================================ */
-
 .menu-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -124,7 +120,6 @@
 /* ============================================
    TABLA
    ============================================ */
-
 .table-container {
     background: var(--bg-card);
     padding: 20px;
@@ -157,7 +152,6 @@ td {
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     font-size: 0.9rem;
     color: var(--bg-light);
-    
 }
 
 tbody tr {
@@ -171,7 +165,6 @@ tbody tr:hover {
 /* ============================================
    BADGES
    ============================================ */
-
 .badge {
     padding: 4px 12px;
     border-radius: 20px;
@@ -193,7 +186,6 @@ tbody tr:hover {
 /* ============================================
    BOTONES
    ============================================ */
-
 .logout-btn {
     padding: 10px 20px;
     background: rgba(255, 118, 117, 0.2);
@@ -216,7 +208,6 @@ tbody tr:hover {
 /* ============================================
    GESTIÓN DE USUARIOS
    ============================================ */
-
 .back-link {
     color: var(--text-secondary);
     text-decoration: none;
@@ -328,7 +319,6 @@ tbody tr:hover {
 /* ============================================
    RESPONSIVE
    ============================================ */
-
 @media screen and (min-width: 768px) {
     .container {
         padding: 20px;
@@ -420,4 +410,70 @@ tbody tr:hover {
         padding: 16px;
         font-size: 1rem;
     }
+}
+
+.acciones {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.btn-edit,
+.btn-delete {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.82rem;
+    transition: all 0.3s;
+}
+
+.btn-edit {
+    background: rgba(108, 92, 231, 0.2);
+    color: var(--primary-color);
+}
+
+.btn-edit:hover {
+    background: rgba(108, 92, 231, 0.35);
+    transform: translateY(-1px);
+}
+
+.btn-delete {
+    background: rgba(255, 118, 117, 0.2);
+    color: #ff7675;
+}
+
+.btn-delete:hover {
+    background: rgba(255, 118, 117, 0.35);
+    transform: translateY(-1px);
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text-secondary);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+/* Badge para usuario protegido (admin por defecto) */
+.badge-protegido {
+    background: rgba(253, 203, 110, 0.2);
+    color: #fdcb6e;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
 }
